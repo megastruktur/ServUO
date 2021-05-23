@@ -183,7 +183,7 @@ namespace Server.Spells.Fifth
                 int total = (m_Caster.Skills.Magery.Fixed + m_Caster.Skills.Poisoning.Fixed) / 2;
 
                 if (total >= 1000)
-                    p = Poison.Deadly;
+                    p = Utility.RandomDouble() <= .3 ? Poison.Lethal : Poison.Deadly;
                 else if (total > 850)
                     p = Poison.Greater;
                 else if (total > 650)
