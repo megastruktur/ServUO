@@ -54,7 +54,12 @@ namespace Server.Spells.Third
                         int range = (int)Caster.GetDistanceToSqrt(m.Location);
 
                         if (total >= 1000)
-                            level = Utility.RandomDouble() <= .1 ? 4 : 3;
+                        {
+                            if (Caster.InRange(m, 4))
+                                level = 4;
+                            else
+                                level = 3;
+                        }
                         else if (total > 850)
                             level = 2;
                         else if (total > 650)
