@@ -4168,7 +4168,7 @@ namespace Server
 			}
 		}
 
-		public static int ActionDelay { get; set; } = 750;
+		public static int ActionDelay { get; set; } = 100;
 
 		public virtual void Lift(Item item, int amount, out bool rejected, out LRReason reject)
 		{
