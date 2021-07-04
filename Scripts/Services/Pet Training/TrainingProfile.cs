@@ -191,12 +191,16 @@ namespace Server.Mobiles
                 // First level
                 if (ControlSlotsMin + 1 == ControlSlots)
                 {
-                    return 21;
+		    // Make training easier
+		    // return 21;
+                    return 11;
                 }
                 // subsequent trains of that level
                 else
                 {
-                    return 22;
+		    // Make training easier
+		    // return 22;
+                    return 12;
                 }
             }
             else
@@ -204,12 +208,16 @@ namespace Server.Mobiles
                 // First train of that level (after level increase, so actually 2nd train)
                 if (TrainedThisLevel == 1)
                 {
-                    return 3;
+		    // Make traning easier
+		    // return 3;
+                    return 0;
                 }
                 // subsequent trains of that level
                 else
                 {
-                    return 2;
+		    // Make training easier
+		    // return 2;
+                    return 0;
                 }
             }
         }
